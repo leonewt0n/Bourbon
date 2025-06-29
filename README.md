@@ -1,8 +1,9 @@
 <div align="center">
+  
   # Bourbon 🥃
   *Barrel-aged Whisky*
   
-  # Whisky 🥃
+  # ~~Whisky 🥃~~
   *Wine but a bit stronger*
   
   ![](https://img.shields.io/github/actions/workflow/status/IsaacMarovitz/Whisky/SwiftLint.yml?style=for-the-badge)
