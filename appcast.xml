@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Whisky</title>
+        <item>
+            <title>2.3.5</title>
+            <pubDate>Sat, 05 Apr 2025 01:55:30 -0400</pubDate>
+            <sparkle:version>43</sparkle:version>
+            <sparkle:shortVersionString>2.3.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://data.getwhisky.app/Releases/v2.3.5/Whisky.zip" length="5019598" type="application/octet-stream" sparkle:edSignature="AgaEUOQMuhIqxfdP6cZ1lwQSJT2PFVCIoluPxjqeUDXzV6n2LnU0qQfYjYv4hSiFLz0DTcKoGev5rEBoucdCCA=="/>
+            <description><![CDATA[
+            <h2>Bug Fixes:</h2>
+            <ul>
+                <li>Fixed configuration view crashes on macOS 15.4</li>
+            </ul>
+
+            <h2>Quality of Life:</h2>
+            <ul>
+                <li>Improved pinned programs on external drives</li>
+            </ul>
+
+            <h2>Full Changelog:</h2> <a href="https://github.com/Whisky-App/Whisky/compare/v2.3.4...v2.3.5">https://github.com/Whisky-App/Whisky/compare/v2.3.4...v2.3.5</a>
+         ]]></description>
+        </item>
+        <item>
+            <title>2.3.4</title>
+            <pubDate>Sun, 10 Nov 2024 01:12:24 +0100</pubDate>
+            <sparkle:version>42</sparkle:version>
+            <sparkle:shortVersionString>2.3.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://data.getwhisky.app/Releases/v2.3.4/Whisky.zip" length="5015219" type="application/octet-stream" sparkle:edSignature="W2Y6yFyc4u/oaXKmDpiL3MMFE4WU7INnYJO7aarjquK2nvRgcOw+DckY0Zl5IgA6LkX1h9rRSEB/5Kj7OnXbAw=="/>
+            <description><![CDATA[
+            <h2>New Features:</h2>
+            <ul>
+                <li>Added toggle for advertising AVX support on macOS Sequoia+</li>
+                <li>Added toggle for enabling DirectX Raytracing support on M3+</li>
+            </ul>
+
+            <h2>Full Changelog:</h2> <a href="https://github.com/Whisky-App/Whisky/compare/v2.3.3...v2.3.4">https://github.com/Whisky-App/Whisky/compare/v2.3.3...v2.3.4</a>
+         ]]></description>
+        </item>
+        <item>
+            <title>2.3.3</title>
+            <pubDate>Thu, 19 Sep 2024 15:28:39 +0200</pubDate>
+            <sparkle:version>41</sparkle:version>
+            <sparkle:shortVersionString>2.3.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://data.getwhisky.app/Releases/v2.3.3/Whisky.zip" length="5005869" type="application/octet-stream" sparkle:edSignature="BGkuvtQUfz4DBT/5J9xgxDfdQxymnp7e4KNJajluZvmwbCn4CBZg5VnlvLeHt2TA76tJf9si0d0ZeeNbAbgIAQ=="/>
+            <description><![CDATA[
+            <h2>New Features:</h2>
+            <ul>
+                <li>Now built with Swift 6 and macOS Sequoia toolchain</li>
+            </ul>
+
+            <h2>Quality of Life:</h2>
+            <ul>
+                <li>Added Arabic localisation</li>
+                <li>Improvements to many other locales</li>
+            </ul>
+
+            <h2>Full Changelog:</h2> <a href="https://github.com/Whisky-App/Whisky/compare/v2.3.2...v2.3.3">https://github.com/Whisky-App/Whisky/compare/v2.3.2...v2.3.3</a>
+         ]]></description>
+        </item>
+    </channel>
+    <div id="divScriptsUsed" style="display: none"/>
+    <script id="globalVarsDetection" src="moz-extension://8dcc3a53-601f-45f8-911f-217d6c972342/js/wrs_env.js"/>
+</rss>
