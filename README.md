@@ -29,8 +29,7 @@ Bourbon provides a clean and easy to use graphical wrapper for Wine built in nat
 ---
 ## Wine Compilation 
 * Download Gcenx Wine from https://github.com/Gcenx/macOS_Wine_builds/releases
-* Extract out wine folder
-* Rename /bin/wine to wine64 (will change in future!)
+* Extract out wine folder and rename to Wine and place in $HOME/Library/Application Support/com.leonewton.Bourbon/Libraries/
 * Download https://github.com/3Shain/dxmt
 * Follow directions to install dxmt https://github.com/3Shain/dxmt/wiki/DXMT-Installation-Guide-for-Geeks
 * Download Apple's Game Porting Toolkit Redist with D3DMetal https://developer.apple.com/games/game-porting-toolkit/
