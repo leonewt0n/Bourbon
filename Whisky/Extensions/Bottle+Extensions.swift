@@ -26,29 +26,13 @@ extension Bottle {
         NSWorkspace.shared.open(url.appending(path: "drive_c"))
     }
 
-    func openTerminal() {
-        let whiskyCmdURL = Bundle.main.url(forResource: "WhiskyCmd", withExtension: nil)
-        if let whiskyCmdURL = whiskyCmdURL {
-            let whiskyCmd = whiskyCmdURL.path(percentEncoded: false)
-            let cmd = "eval \\\"$(\\\"\(whiskyCmd)\\\" shellenv \\\"\(settings.name)\\\")\\\""
-
-            let script = """
-            tell application "Terminal"
-            activate
-            do script "\(cmd)"
-            end tell
-            """
-
-            Task.detached(priority: .userInitiated) {
-                var error: NSDictionary?
-                guard let appleScript = NSAppleScript(source: script) else { return }
-                appleScript.executeAndReturnError(&error)
-
-                if let error = error {
-                    Logger.wineKit.error("Failed to run terminal script \(error)")
-                    guard let description = error["NSAppleScriptErrorMessage"] as? String else { return }
-                    await self.showRunError(message: String(describing: description))
-                }
+    func openWinecfg() {
+        Task.detached(priority: .userInitiated) {
+            do {
+                try await Wine.cfg(bottle: self)
+            } catch {
+                Logger.wineKit.error("Failed to run winecfg: \(error)")
+                await self.showRunError(message: String(describing: error))
             }
         }
     }

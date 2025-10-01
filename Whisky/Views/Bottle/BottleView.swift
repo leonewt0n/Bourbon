@@ -69,8 +69,8 @@ struct BottleView: View {
                     Button("button.cDrive") {
                         bottle.openCDrive()
                     }
-                    Button("button.terminal") {
-                        bottle.openTerminal()
+                    Button("winecfg") {
+                        bottle.openWinecfg()
                     }
                     Button("button.winetricks") {
                         showWinetricksSheet.toggle()
