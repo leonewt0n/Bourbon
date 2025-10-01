@@ -63,6 +63,9 @@ struct BottleView: View {
             .bottomBar {
                 HStack {
                     Spacer()
+                    Button("kill.bottles") {
+                        WhiskyApp.killBottles()
+                    }
                     Button("button.cDrive") {
                         bottle.openCDrive()
                     }
