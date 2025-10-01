@@ -18,11 +18,26 @@ Bourbon provides a clean and easy to use graphical wrapper for Wine built in nat
 Translated on [Crowdin](https://crowdin.com/project/whisky).
 
 ---
-
 ## System Requirements
 - CPU: Apple Silicon (M-series chips)
 - OS: macOS Sonoma 14.0 or later
 
+## Build
+* Install .pkg to get swiftlint https://github.com/realm/SwiftLint/releases
+* Open Bourbon.xcodeproj in Xcode
+* Adjust signing
+* Click Play button
+
+---
+## Wine Compilation 
+* Download Gcenx Wine from https://github.com/Gcenx/macOS_Wine_builds/releases
+* Extract out wine folder
+* Rename /bin/wine to wine64 (will change in future!)
+* Download https://github.com/3Shain/dxmt
+* Follow directions to install dxmt https://github.com/3Shain/dxmt/wiki/DXMT-Installation-Guide-for-Geeks
+* Download Apple's Game Porting Toolkit Redist with D3DMetal https://developer.apple.com/games/game-porting-toolkit/
+* place external folder in wine lib folder
+* Install [GStreamer](https://gstreamer.freedesktop.org/data/pkg/osx/1.26.5/gstreamer-1.0-1.26.5-universal.pkg)
 ---
 
 ## Credits & Acknowledgments
