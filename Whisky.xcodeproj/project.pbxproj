@@ -125,7 +125,7 @@
 		6E355E5729D78249002D83BE /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		6E355E5929D782B2002D83BE /* ProgramsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramsView.swift; sourceTree = "<group>"; };
 		6E355E5D29D7D85D002D83BE /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
-		6E40495229CCA19C006E3F1B /* Whisky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E40495229CCA19C006E3F1B /* Bourbon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bourbon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E40495529CCA19C006E3F1B /* WhiskyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskyApp.swift; sourceTree = "<group>"; };
 		6E40495729CCA19C006E3F1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E40495929CCA19C006E3F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 		6E40495329CCA19C006E3F1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E40495229CCA19C006E3F1B /* Whisky.app */,
+				6E40495229CCA19C006E3F1B /* Bourbon.app */,
 				6E70A4982A9A2197007799E9 /* WhiskyCmd */,
 				6EFDF64A2AAE2DA800EF622F /* WhiskyThumbnail.appex */,
 			);
@@ -397,9 +397,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E40495129CCA19C006E3F1B /* Whisky */ = {
+		6E40495129CCA19C006E3F1B /* Bourbon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E40497729CCA19D006E3F1B /* Build configuration list for PBXNativeTarget "Whisky" */;
+			buildConfigurationList = 6E40497729CCA19D006E3F1B /* Build configuration list for PBXNativeTarget "Bourbon" */;
 			buildPhases = (
 				6E40494E29CCA19C006E3F1B /* Sources */,
 				6E40494F29CCA19C006E3F1B /* Frameworks */,
@@ -413,14 +413,14 @@
 			dependencies = (
 				6EFDF6552AAE2DA800EF622F /* PBXTargetDependency */,
 			);
-			name = Whisky;
+			name = Bourbon;
 			packageProductDependencies = (
 				6E064B1129DD32A200D9A2D2 /* Sparkle */,
 				EB58FB542A499896002DC184 /* SemanticVersion */,
 				8C2AEFC72AED79B700CB568F /* WhiskyKit */,
 			);
 			productName = Whisky;
-			productReference = 6E40495229CCA19C006E3F1B /* Whisky.app */;
+			productReference = 6E40495229CCA19C006E3F1B /* Bourbon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6E70A4972A9A2197007799E9 /* WhiskyCmd */ = {
@@ -530,7 +530,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E40495129CCA19C006E3F1B /* Whisky */,
+				6E40495129CCA19C006E3F1B /* Bourbon */,
 				6E70A4972A9A2197007799E9 /* WhiskyCmd */,
 				6EFDF6492AAE2DA800EF622F /* WhiskyThumbnail */,
 			);
@@ -986,7 +986,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E40497729CCA19D006E3F1B /* Build configuration list for PBXNativeTarget "Whisky" */ = {
+		6E40497729CCA19D006E3F1B /* Build configuration list for PBXNativeTarget "Bourbon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E40497829CCA19D006E3F1B /* Debug */,

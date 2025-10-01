@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E40495129CCA19C006E3F1B"
-               BuildableName = "Whisky.app"
-               BlueprintName = "Whisky"
+               BuildableName = "Bourbon.app"
+               BlueprintName = "Bourbon"
                ReferencedContainer = "container:Whisky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E40495129CCA19C006E3F1B"
-            BuildableName = "Whisky.app"
-            BlueprintName = "Whisky"
+            BuildableName = "Bourbon.app"
+            BlueprintName = "Bourbon"
             ReferencedContainer = "container:Whisky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E40495129CCA19C006E3F1B"
-            BuildableName = "Whisky.app"
-            BlueprintName = "Whisky"
+            BuildableName = "Bourbon.app"
+            BlueprintName = "Bourbon"
             ReferencedContainer = "container:Whisky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
