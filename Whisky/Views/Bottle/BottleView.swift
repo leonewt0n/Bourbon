@@ -31,6 +31,9 @@ struct BottleView: View {
     @State private var path = NavigationPath()
     @State private var programLoading: Bool = false
     @State private var showWinetricksSheet: Bool = false
+    @State private var runtimeAIOLoading: Bool = false
+    @State private var showRuntimeAIOAlert: Bool = false
+    @State private var runtimeAIOAlertMessage: String = ""
 
     private let gridLayout = [GridItem(.adaptive(minimum: 100, maximum: .infinity))]
 
@@ -62,6 +65,18 @@ struct BottleView: View {
             }
             .bottomBar {
                 HStack {
+                    Button("RuntimeAIO") {
+                        Task {
+                            await installRuntimeAIO()
+                        }
+                    }
+                    .disabled(runtimeAIOLoading)
+                    if runtimeAIOLoading {
+                        Spacer()
+                            .frame(width: 10)
+                        ProgressView()
+                            .controlSize(.small)
+                    }
                     Spacer()
                     Button("kill.bottles") {
                         WhiskyApp.killBottles()
@@ -125,6 +140,11 @@ struct BottleView: View {
             .sheet(isPresented: $showWinetricksSheet) {
                 WinetricksView(bottle: bottle)
             }
+            .alert("RuntimeAIO", isPresented: $showRuntimeAIOAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(runtimeAIOAlertMessage)
+            }
             .onChange(of: bottle.settings) { oldValue, newValue in
                 guard oldValue != newValue else { return }
                 // Trigger a reload
@@ -163,6 +183,78 @@ struct BottleView: View {
                     url: program.url
                 ))
             }
+        }
+    }
+    @MainActor
+    private func installRuntimeAIO() async {
+        runtimeAIOLoading = true
+        defer { runtimeAIOLoading = false }
+        do {
+            // Download the archive
+            let urlString = "https://github.com/leonewt0n/Bourbon/raw/refs/heads/main/RuntimeAIO.tar.gz"
+            guard let url = URL(string: urlString) else {
+                throw RuntimeAIOError.invalidURL
+            }
+            let (tempURL, _) = try await URLSession.shared.download(from: url)
+            // Create temporary directory for extraction
+            let tempDir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+            try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
+            defer {
+                try? FileManager.default.removeItem(at: tempDir)
+            }
+            // Extract the tar.gz file
+            let extractProcess = Process()
+            extractProcess.executableURL = URL(fileURLWithPath: "/usr/bin/tar")
+            extractProcess.arguments = ["-xzf", tempURL.path, "-C", tempDir.path]
+            try extractProcess.run()
+            extractProcess.waitUntilExit()
+            guard extractProcess.terminationStatus == 0 else {
+                throw RuntimeAIOError.extractionFailed
+            }
+            // Find install_all.bat file
+            let installScript = tempDir.appendingPathComponent("install_all.bat")
+            guard FileManager.default.fileExists(atPath: installScript.path) else {
+                // Try to find it recursively in subdirectories
+                if let foundScript = try findInstallScript(in: tempDir) {
+                    try await Wine.runBatchFile(url: foundScript, bottle: bottle)
+                } else {
+                    throw RuntimeAIOError.installScriptNotFound
+                }
+                return
+            }
+            // Run the install_all.bat file
+            try await Wine.runBatchFile(url: installScript, bottle: bottle)
+            runtimeAIOAlertMessage = "RuntimeAIO installation completed successfully!"
+            showRuntimeAIOAlert = true
+        } catch {
+            runtimeAIOAlertMessage = "RuntimeAIO installation failed: \(error.localizedDescription)"
+            showRuntimeAIOAlert = true
+        }
+    }
+    private func findInstallScript(in directory: URL) throws -> URL? {
+        let fileManager = FileManager.default
+        let enumerator = fileManager.enumerator(at: directory, includingPropertiesForKeys: nil)
+        while let fileURL = enumerator?.nextObject() as? URL {
+            if fileURL.lastPathComponent.lowercased() == "install_all.bat" {
+                return fileURL
+            }
+        }
+        return nil
+    }
+}
+
+enum RuntimeAIOError: LocalizedError {
+    case invalidURL
+    case extractionFailed
+    case installScriptNotFound
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "Invalid download URL"
+        case .extractionFailed:
+            return "Failed to extract archive"
+        case .installScriptNotFound:
+            return "install_all.bat not found in archive"
         }
     }
 }
