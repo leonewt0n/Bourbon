@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "2600"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "6E70A4972A9A2197007799E9"
                BuildableName = "WhiskyCmd"
                BlueprintName = "WhiskyCmd"
-               ReferencedContainer = "container:Whisky.xcodeproj">
+               ReferencedContainer = "container:Bourbon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "6E70A4972A9A2197007799E9"
             BuildableName = "WhiskyCmd"
             BlueprintName = "WhiskyCmd"
-            ReferencedContainer = "container:Whisky.xcodeproj">
+            ReferencedContainer = "container:Bourbon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -70,7 +70,7 @@
             BlueprintIdentifier = "6E70A4972A9A2197007799E9"
             BuildableName = "WhiskyCmd"
             BlueprintName = "WhiskyCmd"
-            ReferencedContainer = "container:Whisky.xcodeproj">
+            ReferencedContainer = "container:Bourbon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
