@@ -65,7 +65,8 @@ struct WhiskyWineDownloadView: View {
         .frame(width: 400, height: 200)
         .onAppear {
             Task {
-                if let url: URL = URL(string: "https://data.getwhisky.app/Wine/Libraries.tar.gz") {
+                // swiftlint:disable:next line_length
+                if let url: URL = URL(string: "https://github.com/leonewt0n/Bourbon/raw/refs/heads/main/Libraries.tar.gz") {
                     downloadTask = URLSession(configuration: .ephemeral).downloadTask(with: url) { url, _, _ in
                         Task.detached {
                             await MainActor.run {
