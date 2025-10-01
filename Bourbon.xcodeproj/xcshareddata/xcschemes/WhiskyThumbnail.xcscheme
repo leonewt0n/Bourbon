@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EFDF6492AAE2DA800EF622F"
-               BuildableName = "WhiskyThumbnail.appex"
-               BlueprintName = "WhiskyThumbnail"
+               BuildableName = "BourbonThumbnail.appex"
+               BlueprintName = "BourbonThumbnail"
                ReferencedContainer = "container:Bourbon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

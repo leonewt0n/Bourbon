@@ -43,7 +43,7 @@
 		6E70A4A12A9A280C007799E9 /* WhiskyCmd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70A4A02A9A280C007799E9 /* WhiskyCmd.swift */; };
 		6E7C07BE2AAE7B0100F6E66B /* ProgramShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C07BD2AAE7B0100F6E66B /* ProgramShortcut.swift */; };
 		6E7C07C02AAF570100F6E66B /* FileOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7C07BF2AAF570100F6E66B /* FileOpenView.swift */; };
-		6E95F66D2AB3EF3A00D585D1 /* WhiskyCmd in Embed WhiskyCmd */ = {isa = PBXBuildFile; fileRef = 6E70A4982A9A2197007799E9 /* WhiskyCmd */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6E95F66D2AB3EF3A00D585D1 /* BourbonCmd in Embed WhiskyCmd */ = {isa = PBXBuildFile; fileRef = 6E70A4982A9A2197007799E9 /* BourbonCmd */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		6E95F6702AB3F33C00D585D1 /* SwiftyTextTable in Frameworks */ = {isa = PBXBuildFile; productRef = 6E95F66F2AB3F33C00D585D1 /* SwiftyTextTable */; };
 		6E95F6732AB3F67200D585D1 /* Progress in Frameworks */ = {isa = PBXBuildFile; productRef = 6E95F6722AB3F67200D585D1 /* Progress */; };
 		6EB58AC92AEACE5E00B1ED3F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 6EB58AC82AEACE5E00B1ED3F /* Localizable.xcstrings */; };
@@ -51,7 +51,7 @@
 		6EFDF64C2AAE2DA800EF622F /* QuickLookThumbnailing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFDF64B2AAE2DA800EF622F /* QuickLookThumbnailing.framework */; };
 		6EFDF64E2AAE2DA800EF622F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFDF64D2AAE2DA800EF622F /* Quartz.framework */; };
 		6EFDF6512AAE2DA800EF622F /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDF6502AAE2DA800EF622F /* ThumbnailProvider.swift */; };
-		6EFDF6562AAE2DA800EF622F /* WhiskyThumbnail.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6EFDF64A2AAE2DA800EF622F /* WhiskyThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6EFDF6562AAE2DA800EF622F /* BourbonThumbnail.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6EFDF64A2AAE2DA800EF622F /* BourbonThumbnail.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6EFDF6662AAE303300EF622F /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EFDF6652AAE303300EF622F /* Icons.xcassets */; };
 		8C2AEFC82AED79B700CB568F /* WhiskyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2AEFC72AED79B700CB568F /* WhiskyKit */; };
 		8C2AEFCA2AED79CD00CB568F /* WhiskyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2AEFC92AED79CD00CB568F /* WhiskyKit */; };
@@ -91,7 +91,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				6E2FB15E2B589A7800E344C6 /* cabextract in Embed WhiskyCmd */,
-				6E95F66D2AB3EF3A00D585D1 /* WhiskyCmd in Embed WhiskyCmd */,
+				6E95F66D2AB3EF3A00D585D1 /* BourbonCmd in Embed WhiskyCmd */,
 			);
 			name = "Embed WhiskyCmd";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +102,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6EFDF6562AAE2DA800EF622F /* WhiskyThumbnail.appex in Embed Foundation Extensions */,
+				6EFDF6562AAE2DA800EF622F /* BourbonThumbnail.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +141,7 @@
 		6E6C0CF32A419A7600356232 /* RosettaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosettaView.swift; sourceTree = "<group>"; };
 		6E6C0CF52A419A8300356232 /* WhiskyWineDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskyWineDownloadView.swift; sourceTree = "<group>"; };
 		6E6C0CF72A419A8C00356232 /* WhiskyWineInstallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskyWineInstallView.swift; sourceTree = "<group>"; };
-		6E70A4982A9A2197007799E9 /* WhiskyCmd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WhiskyCmd; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E70A4982A9A2197007799E9 /* BourbonCmd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BourbonCmd; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E70A49A2A9A2197007799E9 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		6E70A4A02A9A280C007799E9 /* WhiskyCmd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiskyCmd.swift; sourceTree = "<group>"; };
 		6E7C07BD2AAE7B0100F6E66B /* ProgramShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramShortcut.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		6E899D1129CFC41D00A4A083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6EB58AC82AEACE5E00B1ED3F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		6EF557972A410599001A4F09 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
-		6EFDF64A2AAE2DA800EF622F /* WhiskyThumbnail.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WhiskyThumbnail.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EFDF64A2AAE2DA800EF622F /* BourbonThumbnail.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BourbonThumbnail.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EFDF64B2AAE2DA800EF622F /* QuickLookThumbnailing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookThumbnailing.framework; path = System/Library/Frameworks/QuickLookThumbnailing.framework; sourceTree = SDKROOT; };
 		6EFDF64D2AAE2DA800EF622F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		6EFDF6502AAE2DA800EF622F /* ThumbnailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
@@ -280,8 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				6E40495229CCA19C006E3F1B /* Bourbon.app */,
-				6E70A4982A9A2197007799E9 /* WhiskyCmd */,
-				6EFDF64A2AAE2DA800EF622F /* WhiskyThumbnail.appex */,
+				6E70A4982A9A2197007799E9 /* BourbonCmd */,
+				6EFDF64A2AAE2DA800EF622F /* BourbonThumbnail.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,9 +423,9 @@
 			productReference = 6E40495229CCA19C006E3F1B /* Bourbon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6E70A4972A9A2197007799E9 /* WhiskyCmd */ = {
+		6E70A4972A9A2197007799E9 /* BourbonCmd */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E70A49E2A9A2197007799E9 /* Build configuration list for PBXNativeTarget "WhiskyCmd" */;
+			buildConfigurationList = 6E70A49E2A9A2197007799E9 /* Build configuration list for PBXNativeTarget "BourbonCmd" */;
 			buildPhases = (
 				6E70A4942A9A2197007799E9 /* Sources */,
 				6E70A4952A9A2197007799E9 /* Frameworks */,
@@ -435,7 +435,7 @@
 			);
 			dependencies = (
 			);
-			name = WhiskyCmd;
+			name = BourbonCmd;
 			packageProductDependencies = (
 				6E59676A2A9A424900D64F70 /* ArgumentParser */,
 				6E95F66F2AB3F33C00D585D1 /* SwiftyTextTable */,
@@ -444,12 +444,12 @@
 				8C2AEFC92AED79CD00CB568F /* WhiskyKit */,
 			);
 			productName = WhiskyCmd;
-			productReference = 6E70A4982A9A2197007799E9 /* WhiskyCmd */;
+			productReference = 6E70A4982A9A2197007799E9 /* BourbonCmd */;
 			productType = "com.apple.product-type.tool";
 		};
-		6EFDF6492AAE2DA800EF622F /* WhiskyThumbnail */ = {
+		6EFDF6492AAE2DA800EF622F /* BourbonThumbnail */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6EFDF6572AAE2DA800EF622F /* Build configuration list for PBXNativeTarget "WhiskyThumbnail" */;
+			buildConfigurationList = 6EFDF6572AAE2DA800EF622F /* Build configuration list for PBXNativeTarget "BourbonThumbnail" */;
 			buildPhases = (
 				6EFDF6462AAE2DA800EF622F /* Sources */,
 				6EFDF6472AAE2DA800EF622F /* Frameworks */,
@@ -459,12 +459,12 @@
 			);
 			dependencies = (
 			);
-			name = WhiskyThumbnail;
+			name = BourbonThumbnail;
 			packageProductDependencies = (
 				8CB681E62AED7CD00018D319 /* WhiskyKit */,
 			);
 			productName = WhiskyThumbnail;
-			productReference = 6EFDF64A2AAE2DA800EF622F /* WhiskyThumbnail.appex */;
+			productReference = 6EFDF64A2AAE2DA800EF622F /* BourbonThumbnail.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -531,8 +531,8 @@
 			projectRoot = "";
 			targets = (
 				6E40495129CCA19C006E3F1B /* Bourbon */,
-				6E70A4972A9A2197007799E9 /* WhiskyCmd */,
-				6EFDF6492AAE2DA800EF622F /* WhiskyThumbnail */,
+				6E70A4972A9A2197007799E9 /* BourbonCmd */,
+				6EFDF6492AAE2DA800EF622F /* BourbonThumbnail */,
 			);
 		};
 /* End PBXProject section */
@@ -644,7 +644,7 @@
 /* Begin PBXTargetDependency section */
 		6EFDF6552AAE2DA800EF622F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6EFDF6492AAE2DA800EF622F /* WhiskyThumbnail */;
+			target = 6EFDF6492AAE2DA800EF622F /* BourbonThumbnail */;
 			targetProxy = 6EFDF6542AAE2DA800EF622F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -984,7 +984,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E70A49E2A9A2197007799E9 /* Build configuration list for PBXNativeTarget "WhiskyCmd" */ = {
+		6E70A49E2A9A2197007799E9 /* Build configuration list for PBXNativeTarget "BourbonCmd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E70A49C2A9A2197007799E9 /* Debug */,
@@ -993,7 +993,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6EFDF6572AAE2DA800EF622F /* Build configuration list for PBXNativeTarget "WhiskyThumbnail" */ = {
+		6EFDF6572AAE2DA800EF622F /* Build configuration list for PBXNativeTarget "BourbonThumbnail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6EFDF6582AAE2DA800EF622F /* Debug */,

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E70A4972A9A2197007799E9"
-               BuildableName = "WhiskyCmd"
-               BlueprintName = "WhiskyCmd"
+               BuildableName = "BourbonCmd"
+               BlueprintName = "BourbonCmd"
                ReferencedContainer = "container:Bourbon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E70A4972A9A2197007799E9"
-            BuildableName = "WhiskyCmd"
-            BlueprintName = "WhiskyCmd"
+            BuildableName = "BourbonCmd"
+            BlueprintName = "BourbonCmd"
             ReferencedContainer = "container:Bourbon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E70A4972A9A2197007799E9"
-            BuildableName = "WhiskyCmd"
-            BlueprintName = "WhiskyCmd"
+            BuildableName = "BourbonCmd"
+            BlueprintName = "BourbonCmd"
             ReferencedContainer = "container:Bourbon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
