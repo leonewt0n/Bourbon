@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-  <img width="750" alt="New Bottle" src="https://github.com/leonewt0n/Bourbon/blob/main/bourbonScreenshot.png">
+  <img width="750" alt="New Bottle" src="https://github.com/leonewt0n/Bourbon/raw/main/bourbonScreenshot.png">
 
 </div>
 
