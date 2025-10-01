@@ -44,8 +44,69 @@ struct WinetricksCategory {
 class Winetricks {
     static let winetricksURL: URL = WhiskyWineInstaller.libraryFolder
         .appending(path: "winetricks")
+    static let winetricksRemoteURL = "https://raw.githubusercontent.com/Winetricks/winetricks/" +
+                                     "refs/heads/master/src/winetricks"
+    static let verbsRemoteURL = "https://raw.githubusercontent.com/Winetricks/winetricks/" +
+                                 "refs/heads/master/files/verbs/all.txt"
+    static let verbsURL: URL = WhiskyWineInstaller.libraryFolder.appending(path: "verbs.txt")
+
+    /// Downloads the latest winetricks script and verbs file, makes them executable
+    static func downloadWinetricks() async throws {
+        guard let winetricksUrl = URL(string: winetricksRemoteURL),
+              let verbsUrl = URL(string: verbsRemoteURL) else {
+            throw URLError(.badURL)
+        }
+        // Ensure the Libraries directory exists
+        let librariesDir = WhiskyWineInstaller.libraryFolder
+        if !FileManager.default.fileExists(atPath: librariesDir.path) {
+            try FileManager.default.createDirectory(at: librariesDir, withIntermediateDirectories: true)
+        }
+        // Download the winetricks script
+        let (winetricksData, _) = try await URLSession.shared.data(from: winetricksUrl)
+        // Download the verbs file (all.txt)
+        let (verbsData, _) = try await URLSession.shared.data(from: verbsUrl)
+        // Write to the winetricks file
+        try winetricksData.write(to: winetricksURL)
+        // Write to the verbs.txt file
+        try verbsData.write(to: verbsURL)
+        // Make the winetricks file executable
+        try FileManager.default.setAttributes([.posixPermissions: 0o755], ofItemAtPath: winetricksURL.path)
+        print("Winetricks and verbs downloaded successfully:")
+        print("- Winetricks: \(winetricksURL.path)")
+        print("- Verbs: \(verbsURL.path)")
+    }
+    /// Forces a re-download of the winetricks script and verbs file
+    static func updateWinetricks() async throws {
+        // Remove existing files if they exist
+        if FileManager.default.fileExists(atPath: winetricksURL.path) {
+            try FileManager.default.removeItem(at: winetricksURL)
+        }
+        if FileManager.default.fileExists(atPath: verbsURL.path) {
+            try FileManager.default.removeItem(at: verbsURL)
+        }
+        // Download fresh copies
+        try await downloadWinetricks()
+    }
 
     static func runCommand(command: String, bottle: Bottle) async {
+        // Ensure winetricks and verbs file are downloaded
+        do {
+            if !FileManager.default.fileExists(atPath: winetricksURL.path) ||
+               !FileManager.default.fileExists(atPath: verbsURL.path) {
+                try await downloadWinetricks()
+            }
+        } catch {
+            print("Failed to download winetricks: \(error)")
+            await MainActor.run {
+                let alert = NSAlert()
+                alert.messageText = String(localized: "alert.message")
+                alert.informativeText = "Failed to download winetricks: \(error.localizedDescription)"
+                alert.alertStyle = .critical
+                alert.addButton(withTitle: String(localized: "button.ok"))
+                alert.runModal()
+            }
+            return
+        }
         guard let resourcesURL = Bundle.main.url(forResource: "cabextract", withExtension: nil)?
             .deletingLastPathComponent() else { return }
         // swiftlint:disable:next line_length
@@ -81,14 +142,22 @@ class Winetricks {
     }
 
     static func parseVerbs() async -> [WinetricksCategory] {
-        // Grab the verbs file
-        let verbsURL = WhiskyWineInstaller.libraryFolder.appending(path: "verbs.txt")
-        let verbs: String = await { () async -> String in
+        // Ensure verbs file exists
+        do {
+            if !FileManager.default.fileExists(atPath: verbsURL.path) {
+                try await downloadWinetricks()
+            }
+        } catch {
+            print("Failed to download verbs file: \(error)")
+            return []
+        }
+        // Read the local verbs file
+        let verbs: String = {
             do {
-                let (data, _) = try await URLSession.shared.data(from: verbsURL)
-                return String(data: data, encoding: .utf8) ?? String()
+                return try String(contentsOf: verbsURL, encoding: .utf8)
             } catch {
-                return String()
+                print("Failed to read verbs file: \(error)")
+                return ""
             }
         }()
 
