@@ -47,8 +47,28 @@ public class WhiskyWineInstaller {
 
             try Tar.untar(tarBall: from, toURL: applicationFolder)
             try FileManager.default.removeItem(at: from)
+            // Remove quarantine attribute from the installed files
+            removeQuarantineAttribute()
         } catch {
             print("Failed to install WhiskyWine: \(error)")
+        }
+    }
+    /// Removes the quarantine attribute from the Bourbon application support directory
+    private static func removeQuarantineAttribute() {
+        let bourbonPath = "\(NSHomeDirectory())/Library/Application Support/com.leonewton.Bourbon/"
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/xattr")
+        process.arguments = ["-dr", "com.apple.quarantine", bourbonPath]
+        do {
+            try process.run()
+            process.waitUntilExit()
+            if process.terminationStatus == 0 {
+                print("Successfully removed quarantine attribute from Bourbon directory")
+            } else {
+                print("Warning: Failed to remove quarantine attribute (exit code: \(process.terminationStatus))")
+            }
+        } catch {
+            print("Warning: Could not run xattr command to remove quarantine: \(error)")
         }
     }
 
