@@ -1,3 +1,5 @@
+ NO LONGER MAINTAINED see : https://github.com/Sikarugir-App/Sikarugir. This GUI gives you more control and options than whiskey and is currently maintained. Watch video on their github to learn how to use it. Create a link from inside the generated .app to WineLauncher to a have a simple GUI letting you run games. Keep all games files in the .app and they will run properly. If theres interest I may make a fork of their app with a simple list that lets you launch games, or maybe they will implement that in the near future. 
+
 <div align="center">
   
   # Bourbon 🥃
